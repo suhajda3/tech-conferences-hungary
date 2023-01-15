@@ -36,13 +36,17 @@ The contents of the file should use the following template:
 
 `date_end`*: the end date of the conference (`YYYY-MM-DD`)
 
-`cfp_start`: the start date of the call for papers (`YYYY-MM-DD`)
+Call For Papers (CFP)
 
-`cfp_end`: the end date of the call for papers (`YYYY-MM-DD`)
+`cfp`: the conference is calling for papers (`cfp`)
 
-`cfp_site`: the website of the call for papers (`https://roadtoaws.com/contact/`)
+`start`**: the start date of the call for papers (`YYYY-MM-DD`)
 
-Variables marked with a `*` are required.
+`end`**: the end date of the call for papers (`YYYY-MM-DD`)
+
+`site`: the website of the call for papers (`https://roadtoaws.com/contact/`)
+
+Variables marked with a `*` are required. Variables marked with a `**` are required for CFP. 
 
 Example:
 
@@ -57,9 +61,10 @@ lang: English
 date_start: 2023-04-01
 date_end:   2023-04-01
 
-cfp_start: 2022-04-01
-cfp_end:   2022-04-01
-cfp_site:  https://roadtoaws.com/contact/
+cfp:
+ start: 2022-04-01
+ end:   2022-04-01
+ site:  https://roadtoaws.com/contact/
 ---
 ```
 

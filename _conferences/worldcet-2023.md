@@ -8,7 +8,8 @@ lang: English
 date_start: 2023-02-10
 date_end:   2023-02-12
 
-cfp_start: 2023-01-01
-cfp_end:   2023-01-20
-cfp_site:  https://www.worldcet.org/submission/
+cfp:
+ start: 2023-01-01
+ end:   2023-01-20
+ site:  https://www.worldcet.org/submission/
 ---
