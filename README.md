@@ -1,5 +1,7 @@
 # Tech Conferences - Hungary 🇭🇺
 
+![Deploy Jekyll site to S3](https://github.com/suhajda3/tech-conferences-hungary/actions/workflows/jekyll-s3.yml/badge.svg)
+
 [**techconf.hu**](https://techconf.hu/)
 
 A community-curated list of Hungarian tech conferences.
