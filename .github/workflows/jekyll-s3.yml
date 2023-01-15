@@ -17,8 +17,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build job
-  build:
+  # Build & Deploy job
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -56,14 +56,8 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
-
-  # Deployment job
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build 
-    steps:
-      - uses: actions/checkout@master
-      - uses: jakejarvis/s3-sync-action@master
+      - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@master
         with:
           args: --follow-symlinks --delete
         env:
@@ -71,4 +65,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-west-1'   # optional: defaults to us-east-1
-          SOURCE_DIR: '/home/runner/work/tech-conferences-hungary/tech-conferences-hungary/_site'      # optional: defaults to entire repository
+          SOURCE_DIR: '$GITHUB_WORKSPACE/_site'      # optional: defaults to entire repository
