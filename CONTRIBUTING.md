@@ -70,8 +70,8 @@ cfp:
 
 ## Create a pull request 📌
 
-Before push, please verify that the file is correctly formatted ([try to run the project](/README.md#running-locally) on you local machine).
+Before push, please verify that the file is correctly formatted ([try to run the project](/README.md#running-locally) on your local machine).
 
-There are no convention for the commit message, but it is recommended to use the following format: `"Add <conference name> <year>"`.
+There is no convention for the commit message, but it is recommended to use the following format: `"Add <conference name> <year>"`.
 
 Then commit the changes, push the code and create a pull request.
