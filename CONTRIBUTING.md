@@ -2,17 +2,17 @@
 
 ## How to choose the event 🧐
 
-This repo is to be a community-curated list of Hungarian tech conferences. So, before adding a new event, please be sure:
+This repo is a community-curated list of Hungarian tech conferences. So, before adding a new event, please be sure:
 
 - make sure it is a tech conference and it is not already listed.
 
-- make sure that is a conference (not a meetup, hackaton, etc.)
+- make sure that is a conference (not a meetup, hackathon, etc.)
 
-- make sure that the event is happenign in Hungary (either in Hungarian or in a foreing language).
+- make sure that the event is happening in Hungary (either in Hungarian or in a foreign language).
 
 ## Prepare the contribution ✍️
 
-Fork this project to your github account and create the file inside the `_conferences/` directory.
+Fork this project to your GitHub account and create the file inside the `_conferences/` directory.
 
 The file should be named the conference name and year with an `.md` extension (for example, `road-to-aws-conf-2023.md`).
 
@@ -22,7 +22,7 @@ The contents of the file should use the following template:
 
 `name`*: the name of the conference, avoid adding the location of the event in the name, the location will be displayed next to the name of the conference.
 
-`website`*: the website of the conference, avoid to link to signup pages (Eventbrite, Meetup, etc...) instead try to find the official event website, to allow users to find more information about the event.
+`website`*: the website of the conference, avoid linking to signup pages (Eventbrite, Meetup, etc...) instead try to find the official event website, to allow users to find more information about the event.
 
 `location`*: the location of the conference (`<city>, <country>`, `Online` or both)
 
