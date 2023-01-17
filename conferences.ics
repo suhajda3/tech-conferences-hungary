@@ -2,7 +2,7 @@
 layout: none
 uid_prefix: https://github.com/suhajda3/tech-conferences-hungary/tree/main/
 ---
-var today = dateTimestamp();
+{% assign today = site.time | date: "%s" %}
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:https://techconf.hu/
