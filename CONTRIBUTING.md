@@ -2,7 +2,7 @@
 
 ## How to choose the event 🧐
 
-This repo is a community-curated list of Hungarian tech conferences. So, before adding a new event, please be sure:
+This repo is a community-curated list of Hungarian tech conferences. So, before adding a new event, please:
 
 - make sure it is a tech conference and it is not already listed.
 
