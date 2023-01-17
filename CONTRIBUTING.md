@@ -24,7 +24,7 @@ The contents of the file should use the following template:
 
 `website`*: the website of the conference, avoid linking to signup pages (Eventbrite, Meetup, etc...) instead try to find the official event website, to allow users to find more information about the event.
 
-`location`*: the location of the conference (`<city>, <country>`, `Online` or both)
+`location`*: the location of the conference (`<city>, <country>`, `Virtual` or both)
 
 `status`: if the conference is canceled or postponed (`Canceled` or `Postponed`)
 
