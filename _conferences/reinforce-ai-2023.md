@@ -1,6 +1,6 @@
 ---
-name: "Reinforce AI Conference"
-website: https://reinforceconf.com/2023
+name: "Compass Tech Summit"
+website: https://www.facebook.com/events/909245097075022
 location: Budapest, Hungary
 online: false
 lang: English
