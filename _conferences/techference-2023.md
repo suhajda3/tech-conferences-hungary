@@ -1,7 +1,7 @@
 ---
 name: "TECHference"
 website: https://techference.hu
-location: Budapest, Hungary
+location: Inárcs, Hungary
 online: false
 lang: Magyar & English
 
