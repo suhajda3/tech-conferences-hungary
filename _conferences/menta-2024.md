@@ -1,7 +1,7 @@
 ---
 name: "MENTA"
 website: https://ivsz.hu/esemenyek/menta-2024-digitall-inspirations-for-competitiveness
-location: Balatonfüred, Hungary
+location: Balatonalmádi, Hungary
 online: false
 lang: Magyar
 
