@@ -23,23 +23,39 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: bom-check
-        uses: arma-actions/bom-check@v1.0
-        with:
-          path: _conferences
+      - name: Check for BOM in conference files
+        run: |
+          if grep -rlP '^\xEF\xBB\xBF' _conferences/; then
+            echo "Error: Found files with BOM (Byte Order Mark)"
+            exit 1
+          else
+            echo "No BOM found in conference files"
+          fi
       - name: Validate conference data file names
         run: ls -1 _conferences/ | grep -v '\.md$' && echo "Found above file names not ending in '.md'. Please correct." && exit 1 || true
-      - name: Prepare for conference data file validation
+      - name: Validate conference data files
         run: |
+          # Install PyKwalify
+          pip install pykwalify
+    
+          # Create temp directory
           mkdir _tmp
-          # Copy conference data files and rename to .yml because pykwalify is picky
-          for file in _conferences/*.md; do
+    
+          # Extract YAML front matter from markdown files
+            for file in _conferences/*.md; do
             name=${file#"_conferences/"}
             name=${name%".md"}
             cp -- "$file" "_tmp/${name}.yml"
           done
+    
           # Strip everything but the YAML front matter block
           sed -ni '/---/{:a;n;/---/b;p;ba}' _tmp/*.yml
+    
+          # Validate each file against the schema
+          for file in _tmp/*.yml; do
+            echo "Validating $file"
+            pykwalify -d "$file" -s conference_schema.yml
+          done
       - name: Validate conference data files
         uses: cketti/action-pykwalify@v0.3-temp-fix
         with:
