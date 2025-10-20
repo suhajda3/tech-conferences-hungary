@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: bom-check
-        uses: arma-actions/bom-check@v1.0
+        uses: arma-actions/bom-check@v1.1
         with:
           path: _conferences
       - name: Validate conference data file names
