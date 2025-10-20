@@ -23,10 +23,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: bom-check
-        uses: arma-actions/bom-check@v1.1
-        with:
-          path: _conferences
+      - name: Check for BOM in conference files
+        run: |
+          if grep -rlP '^\xEF\xBB\xBF' _conferences/; then
+            echo "Error: Found files with BOM (Byte Order Mark)"
+            exit 1
+          else
+            echo "No BOM found in conference files"
+          fi
       - name: Validate conference data file names
         run: ls -1 _conferences/ | grep -v '\.md$' && echo "Found above file names not ending in '.md'. Please correct." && exit 1 || true
       - name: Prepare for conference data file validation
