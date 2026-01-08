@@ -1,5 +1,5 @@
 ---
-name: "ITBUSINESS Data & Technology"
+name: "ITBUSINESS Business & Security"
 website: https://itbusiness.hu/event/esemenyek_rovat/bus-sec-2026
 location: Budapest, Hungary
 online: false
